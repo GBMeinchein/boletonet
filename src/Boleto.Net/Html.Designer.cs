@@ -111,10 +111,10 @@ namespace BoletoNet {
         ///   Looks up a localized string similar to &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
         ///						&lt;tr&gt;
         ///								&lt;td valign=&quot;top&quot;&gt;
-        ///										&lt;table class=&quot;w150 mt23&quot;&gt;
-        ///												&lt;tr class=&quot;ct cpN BHead&quot;&gt;
-        ///														&lt;td class=&quot;ld&quot;&gt;
-        ///																Recibo do Pagador
+        ///										&lt;table class=&quot;150&quot;&gt;
+        ///												&lt;tr class=&quot;BHead&quot;&gt;
+        ///														&lt;td class=&quot;imgLogo Al&quot;&gt;
+        ///															&lt;img src=&quot;@URLIMAGEMLOGO&quot; /&gt;
         ///														&lt;/td&gt;
         ///												&lt;/tr&gt;
         ///										&lt;/table&gt;
@@ -125,8 +125,7 @@ namespace BoletoNet {
         ///														&lt;/td&gt;
         ///												&lt;/tr&gt;
         ///												&lt;tr class=&quot;cp h12 At rBb&quot;&gt;
-        ///														&lt;td&gt;
-        /// [rest of string was truncated]&quot;;.
+        ///														 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Carne {
             get {
@@ -521,8 +520,7 @@ namespace BoletoNet {
         ///								&lt;div class=&quot;t&quot;&gt;(-) Desconto / Abatimentos&lt;/div&gt;
         ///								&lt;div class=&quot;c BB&quot;&gt;@DESCONTOS&lt;/div&gt;
         ///								&lt;div class=&quot;t&quot;&gt;(-) Outras deduções&lt;/div&gt;
-        ///								&lt;div class=&quot;c BB&quot;&gt;@OUTRASDEDUCOES&lt;/div&gt;
-        /// [rest of string was truncated]&quot;;.
+        ///								&lt;div class=&quot;c BB&quot;&gt;@OUTRASDEDUCOES&lt;/div&gt;        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ReciboCedenteParte6 {
             get {

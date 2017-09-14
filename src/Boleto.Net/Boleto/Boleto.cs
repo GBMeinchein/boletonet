@@ -23,6 +23,7 @@ namespace BoletoNet
 		private DateTime _dataVencimento;
 		private DateTime _dataDocumento;
 		private DateTime _dataProcessamento;
+        private int _totalParcela;
 		private int _numeroParcela;
 		private decimal _valorBoleto;
 		private decimal _valorCobrado;
@@ -44,6 +45,7 @@ namespace BoletoNet
 		private IBanco _banco;
 		private ContaBancaria _contaBancaria = new ContaBancaria();
 		private decimal _valorDesconto;
+        private decimal _valorDescontoAntecipacao;
 		private Sacado _sacado;
 		private bool _jurosPermanente;
 
@@ -69,6 +71,7 @@ namespace BoletoNet
         private int _expedidor = 2;
 
 		private string _tipoModalidade = string.Empty;
+        private string _tipoImpressao = "A";
 		private Remessa _remessa;
 
 		private ObservableCollection<GrupoDemonstrativo> _demonstrativos;
@@ -292,6 +295,15 @@ namespace BoletoNet
 			set { this._numeroParcela = value; }
 		}
 
+        /// <summary> 
+		/// Retorna o total de parcelas
+		/// </summary>   
+        public int TotalParcela
+        {
+            get { return this._totalParcela; }
+            set { this._totalParcela = value; }
+        }
+
 		/// <summary> 
 		/// Recupara o número do documento
 		/// </summary>        
@@ -370,10 +382,20 @@ namespace BoletoNet
 			set { this._valorDesconto = value; }
 		}
 
-		/// <summary>
-		/// Retorna do Sacado
+        /// <summary> 
+		/// Retorna o valor do desconto por dia de antecipação do titulo.
+        /// Esse campo é utilizado no banco sicredi posição 083-092 registro detalhe remessa
 		/// </summary>
-		public Sacado Sacado
+		public decimal ValorDescontoAntecipacao
+        {
+            get { return this._valorDescontoAntecipacao; }
+            set { this._valorDescontoAntecipacao = value; }
+        }
+
+        /// <summary>
+        /// Retorna do Sacado
+        /// </summary>
+        public Sacado Sacado
 		{
 			get { return this._sacado; }
 			set { this._sacado = value; }
@@ -541,6 +563,14 @@ namespace BoletoNet
 			set { this._tipoModalidade = value; }
 		}
 
+        /// <summary> 
+		/// Tipo de Impressão Sicredi "A" = Boleto/ "B" = Carne
+		/// </summary>
+        public string TipoImpressao
+        {
+            get { return this._tipoImpressao; }
+            set { this._tipoImpressao = value; }
+        }
 		/// <summary> 
 		/// Retorna o percentual IOS para Seguradoras no caso do Banco Santander
 		/// </summary>
