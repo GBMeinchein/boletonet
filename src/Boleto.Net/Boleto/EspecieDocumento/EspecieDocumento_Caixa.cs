@@ -113,7 +113,7 @@ namespace BoletoNet
                     case EnumEspecieDocumento_Caixa.Outros:
                         this.Codigo = getCodigoEspecieByEnum(EnumEspecieDocumento_Caixa.Outros);
                         this.Especie = "OUTROS";
-                        this.Sigla = "OU";
+                        this.Sigla = "DV";
                         break;
                     default:
                         this.Codigo = "0";
